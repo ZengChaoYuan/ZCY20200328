@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台文件审核</title>
+    <link rel="stylesheet" href="../dist/css/zui.min.css">
+    <link rel="stylesheet" href="../css/adminOther.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                    <!-- 导航头部 -->
+                    <div class="navbar-header">
+                        <!-- 移动设备上的导航切换按钮 -->
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-example">
+                      <span class="sr-only">切换导航</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                        <!-- 品牌名称或logo -->
+                        <a class="navbar-brand" href="#">管理端</a>
+                    </div>
+                    <!-- 导航项目 -->
+                    <div class="collapse navbar-collapse navbar-collapse-example">
+                        <!-- 一般导航项目 -->
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#">欢迎你，XXX</a>
+                            </li>
+                            <li><a href="#">退出</a></li>
+                        </ul>
+                    </div>
+                    <!-- END .navbar-collapse -->
+                </div>
+            </nav>
+        </div>
+        <div class="conter">
+            <div class="content-left">
+                <nav class="menu" data-ride="menu" style="width: 200px">
+                    <ul id="treeMenu" class="tree tree-menu" data-ride="tree">
+                        <li><a href="./adminMain.html"><i class="icon icon-th"></i>首页</a></li>
+                        <li><a href="./adminFileApply.html"><i class="icon icon-user"></i>文件审核管理</a></li>
+                        <li><a href="./adminFileType.html"><i class="icon icon-user"></i>文件类型管理</a></li>
+                        <li><a href="./adminFrontUser.html"><i class="icon icon-user"></i>前台用户管理</a></li>
+                        <li><a href="./adminLog.html"><i class="icon icon-user"></i>日志管理</a></li>
+                        <li><a href="./adminRole.html"><i class="icon icon-user"></i>角色管理</a></li>
+                        <li><a href="./adminUser.html"><i class="icon icon-user"></i>后台用户管理</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="content-right">
+                <div class="panel" style="width: 80%;margin: 20px auto;">
+                    <div class="panel-heading" style="text-align: center; font-size: 18px;font-weight: bold;">
+                        文件搜索
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-xs-5">
+                            <div class="input-group with-padding">
+                                <span class="input-group-addon">文件名称</span>
+                                <input type="text" class="form-control" placeholder="请输入文件名称">
+                            </div>
+                        </div>
+                        <div class="col-xs-7">
+                            <div class="input-group with-padding">
+                                <span class="input-group-addon">上传时间</span>
+                                <input type="text" class="form-control form-date" placeholder="请选择开始时间">
+                                <span class="input-group-addon">至</span>
+                                <input type="text" class="form-control form-date" placeholder="请选择结束时间">
+                            </div>
+                        </div>
+                        <div class="col-xs-5">
+                            <div class="input-group with-padding">
+                                <span class="input-group-addon">文件类型</span>
+                                <select class="form-control">
+                                    <option value="0">全部</option>
+                                    <option value="1">小说</option>
+                                    <option value="2">名著</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="with-padding">
+                                <button class="btn btn-block" type="button">查询</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel" style="width: 80%;margin: 20px auto;">
+                    <div class="panel-heading" style="text-align: center; font-size: 18px;font-weight: bold;">
+                        文件信息管理
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-bordered" id="tableDataGridExample">
+                            <thead>
+                                <tr>
+                                    <th>文件名称</th>
+                                    <th>上传时间</th>
+                                    <th>文件类型</th>
+                                    <th>状态</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>斗罗大陆</td>
+                                    <td>2020年3月25号</td>
+                                    <td>小说</td>
+                                    <td>审核通过</td>
+                                    <td>
+                                        <a>审核通过</a>&emsp;<a>审核不通过</a>&emsp;<a>下载</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>龙王传说</td>
+                                    <td>2020年3月25号</td>
+                                    <td>小说</td>
+                                    <td>审核通过</td>
+                                    <td>
+                                        <a>审核通过</a>&emsp;<a>审核不通过</a>&emsp;<a>下载</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="col-xs-4">
+                        </div>
+                        <div class="col-xs-1">
+                            <button class="btn btn-block" type="button">上一页</button>
+                        </div>
+                        <div class="col-xs-2">
+                            <button class="btn btn-block" type="button" disabled="disabled">1/1</button>
+                        </div>
+                        <div class="col-xs-1">
+                            <button class="btn btn-block" type="button">下一页</button>
+                        </div>
+                        <div class="col-xs-4">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+<script src="../dist/lib/jquery/jquery.js"></script>
+<script src="../dist/js/zui.min.js"></script>
+
+</html>
