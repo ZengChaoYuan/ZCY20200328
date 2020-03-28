@@ -18,11 +18,11 @@
         <div class="panel-body">
             <div class="input-group with-padding">
                 <span class="input-group-addon">用户</span>
-                <input type="text" class="form-control" placeholder="请输入用户">
+                <input type="text" class="form-control" name="adminName" id="adminName" placeholder="请输入用户">
             </div>
             <div class="input-group with-padding">
                 <span class="input-group-addon">密码</span>
-                <input type="password" class="form-control" placeholder="请输入密码">
+                <input type="password" class="form-control" name="password" id="password" placeholder="请输入密码">
             </div>
             <div class="input-group with-padding">
                 <span class="input-group-addon">验证码</span>
@@ -31,7 +31,7 @@
                 <img src="./image/1.png" class="form-control">
             </div>
             <div class="with-padding">
-                <button class="btn btn-block" style="background-color: #6097EE;color: white;font-size: 18px;font-weight: bold;" type="button">登录</button>
+                <button class="btn btn-block btn-primary" onclick="login()" type="button">登录</button>
             </div>
         </div>
     </div>
@@ -60,5 +60,30 @@
 </body>
 <script src="./dist/lib/jquery/jquery.js"></script>
 <script src="./dist/js/zui.min.js"></script>
+<script type="text/javascript">
+function login(){
+	var $adminName=$("#adminName");
+	var $password=$("#password");
+	if($adminName.val()==""){
+		alert("用户名不得为空!");
+	}else if($password.val()==""){
+		alert("密码不得为空!");
+	}else{
+		$.ajax({
+			url:"adminLogin",
+			type:"post",
+			data:{"adminName":$adminName.val(),"password":$password.val()},
+			async:true,
+			dataType:"JSON",
+			success:function(data){
+				console.log(data);
+			},
+			error:function(data){
+				alert("出错啦");
+			}
+		})
+	}
+}
 
+</script>
 </html>

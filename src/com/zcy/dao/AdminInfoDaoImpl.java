@@ -24,11 +24,11 @@ public class AdminInfoDaoImpl implements AdminInfoDao {
 				Long adminId=rs.getLong("ADMIN_ID");
 				String adminname=rs.getString("ADMIN_NAME");
 				String adminpwd=rs.getString("ADMIN_PWD");
-				Long adminStatus=rs.getLong("ADMIN_STATUS");
+				Long adminState=rs.getLong("ADMIN_STATE");
 				Date adminCtime=rs.getDate("ADMIN_CTIME");
 				Long roleId=rs.getLong("ROLE_ID");
 				AdminInfo info=new AdminInfo(adminId,
-						adminname,adminpwd,adminStatus,adminCtime,
+						adminname,adminpwd,adminState,adminCtime,
 						roleId);
 				return info;
 			}

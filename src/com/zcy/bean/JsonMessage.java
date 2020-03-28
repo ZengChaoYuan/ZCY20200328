@@ -8,7 +8,6 @@ public class JsonMessage {
   private String msg;
   private String location;
   private List<Object> dataList=new ArrayList<Object>();
-  //private Page page;
   
 public int getId() {
 	return id;
